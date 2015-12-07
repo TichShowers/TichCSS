@@ -1,0 +1,66 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.banner {
+	height: $banner-height;
+    background: url($banner-img) repeat scroll 0 10%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+    img {
+        width: $avatar-dimensions;
+        height: $avatar-dimensions;
+        margin: $avatar-position auto;
+        
+        @include border-radius(100%);
+        border: $border-thick solid (transparentize($key-color, 0.3));
+    }
+}
+
+$border: $border-thick / 2.7;
+
+$nav-text: $nav-color;
+$nav-background: $accent-color;
+
+nav {
+    font-size: $nav-font-size;
+    width: 100%;
+    //border-bottom: $border-thick solid lighten($accent-color, 5%);
+    //border-bottom: 1px solid rgb(50,50,50);
+    //border-top: 1px solid rgb(50,50,50);
+    background: $nav-background;
+    padding: ($border) 0;
+    max-height: $nav-font-size + (2 * $border) + 0.1em;
+    
+    @include box-sizing(border-box);
+    @include box-shadow(0 0.05em 0.3em 0.05em $dark-color);
+    
+    ul {
+        list-style: none;
+        display: flex;
+        margin: 0 auto;
+        padding:0;
+        justify-content: center;
+    }
+    
+    li{ 
+        padding: 0;
+        margin: -0.05em;
+        display: inline-block;
+    }
+    
+    a {
+        padding: 0 2em;
+        overflow: hidden;
+        color: $nav-text;
+        text-decoration: none;
+    }
+    
+    a:hover, a:focus, a.active {
+        color: darken($nav-text, 15%);
+        text-decoration: none;
+        border-bottom: $border solid lighten($nav-text, 5%);
+    }
+}

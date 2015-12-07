@@ -1,0 +1,51 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+footer {
+	width: 100%;
+	background: $dark-color;
+	color: invert($dark-color);
+	border-top: $border-thick solid lighten($color: $dark-color, $amount: 25%);
+	
+	text-align: center;
+	
+	.nav {
+		padding: 0;
+		list-style: none;
+		display: flex;
+		margin: 0.5em;
+		
+		justify-content: center;
+		
+		li {
+			padding: 0 0.75em;
+			border-right: 1px solid invert($dark-color);
+			
+		}
+		
+		li:last-child {
+			border-right: none;
+		}
+	}
+	
+	p {
+		margin: 0 auto;
+	}
+	
+	a {
+		text-decoration: none;
+		color: $accent-color;
+	}
+	
+	@each $name, $color in $colors {
+		a.link-#{$name} {
+			color: $color;
+		}
+	}
+	
+	a:hover {
+		color: darken(invert($dark-color), 20%);
+	}
+	
+	
+}

@@ -1,0 +1,37 @@
+//colors
+
+$colors: (
+	blue: rgb(50, 150, 240),
+	red: rgb(243, 72, 72),
+	pink: rgb(250, 150, 250),
+	purple: rgb(171, 150, 189),
+	orange: rgb(250, 150, 40),
+	green: rgb(140, 200, 0)
+	);
+	
+@function palette($color) {
+    @return map-get($colors, $color);
+}
+
+$key-color: rgb(40, 200, 255);
+$dark-color: rgb(34, 34, 34);
+$accent-color: palette(green);
+$background-color: $key-color;
+
+$nav-color: mix($accent-color, $dark-color, 20);
+
+$link-color: darken($accent-color, 20);
+
+//sizes
+
+$border-thick: 0.5em;
+$footer-height: 8.3em;
+$banner-height: 25em;
+$font-size: 1em;
+$nav-font-size: $font-size * 2;
+$avatar-dimensions: 0.6 * $banner-height;
+$avatar-position: ($banner-height - $avatar-dimensions) / 2;
+
+//banners
+
+$banner-img: '../img/banners/banner1.png';

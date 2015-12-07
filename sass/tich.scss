@@ -1,0 +1,21 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+body {
+	background-color: $background-color;
+	font-family: 'Signika', Verdana, sans-serif;
+}
+
+@import './page-layout.scss';
+@import './header.scss';
+
+@import './common.scss';
+@import './chibis.scss';
+
+.container {
+	//width: 100%;
+	margin: 0 auto;
+	padding: 0 4em;
+}
+
+@import './footer.scss';

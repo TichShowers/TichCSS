@@ -1,0 +1,181 @@
+body {
+  background-color: #28c8ff;
+  font-family: 'Signika', Verdana, sans-serif; }
+
+footer {
+  width: 100%;
+  height: 8.3em;
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; }
+
+.wrap {
+  min-height: 100%;
+  position: relative; }
+
+.content {
+  padding-bottom: 8.3em; }
+
+.banner {
+  height: 25em;
+  background: url("../img/banners/banner1.png") repeat scroll 0 10%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-content: center; }
+  .banner img {
+    width: 15em;
+    height: 15em;
+    margin: 5em auto;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    border-radius: 100%;
+    border: 0.5em solid rgba(40, 200, 255, 0.7); }
+
+nav {
+  font-size: 2em;
+  width: 100%;
+  background: #8cc800;
+  padding: 0.18519em 0;
+  max-height: 2.47037em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 0.05em 0.3em 0.05em #222222;
+  -moz-box-shadow: 0 0.05em 0.3em 0.05em #222222;
+  box-shadow: 0 0.05em 0.3em 0.05em #222222; }
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    justify-content: center; }
+  nav li {
+    padding: 0;
+    margin: -0.05em;
+    display: inline-block; }
+  nav a {
+    padding: 0 2em;
+    overflow: hidden;
+    color: #37431b;
+    text-decoration: none; }
+  nav a:hover, nav a:focus, nav a.active {
+    color: #0a0c05;
+    text-decoration: none;
+    border-bottom: 0.18519em solid #465522; }
+
+a {
+  color: #456200; }
+
+a:hover, a:focus {
+  text-decoration: none;
+  color: #689500;
+  transition: all .15s ease-in-out; }
+
+.chibi {
+  padding: 50px;
+  max-width: 800px; }
+  .chibi .content-box {
+    background: #8ee2ff;
+    padding: 1em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    border-radius: 1em;
+    -webkit-box-shadow: 0 1px 7px 0.05em #222222;
+    -moz-box-shadow: 0 1px 7px 0.05em #222222;
+    box-shadow: 0 1px 7px 0.05em #222222; }
+
+.chibi-magical-girl {
+  position: relative;
+  margin-left: 50px;
+  padding-top: 115px;
+  width: 750px; }
+  .chibi-magical-girl .content-box {
+    min-height: 205px;
+    width: 700px; }
+  .chibi-magical-girl:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url("../img/chibis//magical-girl-top.png");
+    background-repeat: no-repeat;
+    background-size: 116px;
+    background-position: top left; }
+
+.chibi-diving {
+  background-image: url("../img/chibis/diving_tich_falling.png"), url("../img/chibis/diving_altich_exiting.png"), url("../img/chibis/diving_mist_sitting.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 116px, 287px, 235px;
+  background-position: 767px center, 710px bottom, 716px top;
+  position: relative;
+  z-index: initial;
+  padding-right: 300px;
+  margin-bottom: 2em;
+  width: 710px; }
+  .chibi-diving .content-box {
+    min-height: 205px;
+    width: 620px; }
+  .chibi-diving:after {
+    content: "";
+    position: absolute;
+    top: 178px;
+    right: 325px;
+    bottom: 38px;
+    left: 0;
+    z-index: -1;
+    background-image: url("../img/chibis//diving_ladder_repeat.png");
+    background-repeat: repeat-y;
+    background-size: 19px;
+    background-position: top right; }
+
+.container {
+  margin: 0 auto;
+  padding: 0 4em; }
+
+footer {
+  width: 100%;
+  background: #222222;
+  color: #dddddd;
+  border-top: 0.5em solid #626262;
+  text-align: center; }
+  footer .nav {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    margin: 0.5em;
+    justify-content: center; }
+    footer .nav li {
+      padding: 0 0.75em;
+      border-right: 1px solid #dddddd; }
+    footer .nav li:last-child {
+      border-right: none; }
+  footer p {
+    margin: 0 auto; }
+  footer a {
+    text-decoration: none;
+    color: #8cc800; }
+  footer a.link-blue {
+    color: #3296f0; }
+  footer a.link-red {
+    color: #f34848; }
+  footer a.link-pink {
+    color: #fa96fa; }
+  footer a.link-purple {
+    color: #ab96bd; }
+  footer a.link-orange {
+    color: #fa9628; }
+  footer a.link-green {
+    color: #8cc800; }
+  footer a:hover {
+    color: #aaaaaa; }

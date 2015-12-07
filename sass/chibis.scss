@@ -1,0 +1,105 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+$images: (
+		'diving': (
+			'Tich falling': '../img/chibis/diving_tich_falling.png',
+			'Altich exiting': '../img/chibis/diving_altich_exiting.png',
+			'Mist Sitting': '../img/chibis/diving_mist_sitting.png',
+			'Ladder': '../img/chibis//diving_ladder_repeat.png',
+		),
+		'magical-girl' : (
+			'Top': '../img/chibis//magical-girl-top.png',
+			
+		)
+	);
+
+@function chibi($set, $image) {
+    @return map-get(map-get($images, $set), $image);
+}
+
+$chibi-size: 800px;
+$diving-start-offset: 90px;
+$magical-girl-start-offset: 50px;
+
+.chibi {
+	padding: 50px;
+	
+	max-width: $chibi-size;
+	
+	//margin: 0 auto;
+	
+	.content-box {
+		background: lighten($key-color, 20); 
+		padding: 1em;
+		@include border-radius(1em);
+		@include box-shadow(0 1px 7px 0.05em $dark-color);
+	}
+}
+
+$magical-girl-start: $chibi-size - $magical-girl-start-offset;
+
+.chibi-magical-girl {
+	position: relative; 
+	margin-left: $magical-girl-start-offset;
+	padding-top: 115px;
+	
+	width: $magical-girl-start;
+	
+	.content-box {
+		min-height: 205px;
+		width: ($magical-girl-start - $magical-girl-start-offset);
+	}
+	
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+		background-image: url(chibi('magical-girl', 'Top'));		
+		background-repeat: no-repeat;
+		background-size: 116px;
+		background-position: top left;
+	}
+}
+
+$diving-start: $chibi-size - $diving-start-offset;
+
+.chibi-diving {
+	background-image: url(chibi('diving', 'Tich falling')), 
+					  url(chibi('diving', 'Altich exiting')), 
+					  url(chibi('diving', 'Mist Sitting'));
+						
+	background-repeat: no-repeat, no-repeat, no-repeat;
+	background-size:  116px, 287px, 235px;
+	background-position: ($diving-start + 57px) center, $diving-start bottom, ($diving-start+6px) top;
+	position: relative;
+	z-index: initial;
+	padding-right: 300px;
+	
+	margin-bottom: 2em;
+	
+	width: ($diving-start);
+	
+	.content-box {
+		min-height: 205px;
+		width: ($diving-start - $diving-start-offset);
+	}
+	
+	&:after {
+		content: "";
+		position: absolute;
+		top: 178px;
+		right: 325px;
+		bottom:38px;
+		left: 0;
+		z-index: -1;
+		background-image: url(chibi('diving', 'Ladder'));		
+		background-repeat: repeat-y;
+		background-size: 19px;
+		background-position: top right;
+	}
+}

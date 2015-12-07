@@ -1,0 +1,25 @@
+{
+    "version": "0.1.0",
+    "command": "gulp",
+    "isShellCommand": true,
+    "args": [
+        "--no-color"
+    ],
+    "tasks": [
+		{
+			"taskName": "scripts",
+			"isBuildCommand": true,
+			"showOutput": "always"
+		},
+		{
+			"taskName": "sass",
+			"isBuildCommand": true,
+			"showOutput": "always"
+		},
+		{
+			"taskName": "watch",
+			"isBuildCommand": true,
+			"showOutput": "always"
+		}
+	]
+}

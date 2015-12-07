@@ -1,0 +1,11 @@
+{
+  "name": "TichCSS",
+  "version": "1.0.0",
+  "description": "CSS project to build CSS for me",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tich Showers",
+  "license": "MIT"
+}
