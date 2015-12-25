@@ -26,12 +26,71 @@ html, body {
   background: url("../img/banners/banner1.png") repeat scroll 0 10%;
   background-size: cover;
   display: flex;
-  justify-content: center;
-  align-content: center; }
+  justify-content: center; }
   .banner img {
     width: 15em;
     height: 15em;
     margin: 5em auto;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    border-radius: 100%;
+    border: 0.5em solid rgba(40, 200, 255, 0.7); }
+
+.banner-xs {
+  height: 12.5em; }
+  .banner-xs img {
+    width: 7.5em;
+    height: 7.5em;
+    margin: 2.5em auto;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    border-radius: 100%;
+    border: 0.5em solid rgba(40, 200, 255, 0.7); }
+
+.banner-sm {
+  height: 16.66667em; }
+  .banner-sm img {
+    width: 10em;
+    height: 10em;
+    margin: 3.33333em auto;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    border-radius: 100%;
+    border: 0.5em solid rgba(40, 200, 255, 0.7); }
+
+.banner-md {
+  height: 25em; }
+  .banner-md img {
+    width: 15em;
+    height: 15em;
+    margin: 5em auto;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    border-radius: 100%;
+    border: 0.5em solid rgba(40, 200, 255, 0.7); }
+
+.banner-lg {
+  height: 37.5em; }
+  .banner-lg img {
+    width: 22.5em;
+    height: 22.5em;
+    margin: 7.5em auto;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    border-radius: 100%;
+    border: 0.5em solid rgba(40, 200, 255, 0.7); }
+
+.banner-xl {
+  height: 50em; }
+  .banner-xl img {
+    width: 30em;
+    height: 30em;
+    margin: 10em auto;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     -ms-border-radius: 100%;
@@ -80,10 +139,12 @@ a:hover, a:focus {
 
 .chibi {
   padding: 50px;
-  max-width: 800px; }
+  max-width: 800px;
+  margin: 0.5em auto; }
   .chibi .content-box {
     background: #8ee2ff;
     padding: 1em;
+    width: 600px;
     -webkit-border-radius: 1em;
     -moz-border-radius: 1em;
     -ms-border-radius: 1em;
@@ -92,13 +153,31 @@ a:hover, a:focus {
     -moz-box-shadow: 0 1px 7px 0.05em #222222;
     box-shadow: 0 1px 7px 0.05em #222222; }
 
+.chibi-guitar {
+  position: relative;
+  padding-top: 115px; }
+  .chibi-guitar .content-box {
+    min-height: 100px;
+    width: 600px;
+    margin-right: 200px; }
+  .chibi-guitar:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url("../img/chibis/rayne-guitar.png");
+    background-repeat: no-repeat;
+    background-size: 116px;
+    background-position: top left; }
+
 .chibi-magical-girl {
   position: relative;
-  margin-left: 50px;
-  padding-top: 115px;
-  width: 750px; }
+  padding-top: 115px; }
   .chibi-magical-girl .content-box {
-    min-height: 205px;
+    min-height: 100px;
     width: 700px; }
   .chibi-magical-girl:after {
     content: "";
@@ -141,7 +220,9 @@ a:hover, a:focus {
 
 .container {
   margin: 0 auto;
-  padding: 0 4em; }
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
 
 footer {
   width: 100%;
@@ -168,11 +249,11 @@ footer {
   footer a.link-blue {
     color: #3296f0; }
   footer a.link-red {
-    color: #f34848; }
+    color: #f14b4b; }
   footer a.link-pink {
     color: #fa96fa; }
   footer a.link-purple {
-    color: #ab96bd; }
+    color: #bb6fc6; }
   footer a.link-orange {
     color: #fa9628; }
   footer a.link-green {

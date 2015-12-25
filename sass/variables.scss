@@ -2,9 +2,9 @@
 
 $colors: (
 	blue: rgb(50, 150, 240),
-	red: rgb(243, 72, 72),
+	red: rgb(241, 75, 75),
 	pink: rgb(250, 150, 250),
-	purple: rgb(171, 150, 189),
+	purple: rgb(187, 111, 198),
 	orange: rgb(250, 150, 40),
 	green: rgb(140, 200, 0)
 	);
@@ -29,8 +29,6 @@ $footer-height: 8.3em;
 $banner-height: 25em;
 $font-size: 1em;
 $nav-font-size: $font-size * 2;
-$avatar-dimensions: 0.6 * $banner-height;
-$avatar-position: ($banner-height - $avatar-dimensions) / 2;
 
 //banners
 
