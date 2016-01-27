@@ -41,7 +41,7 @@ html, body {
 nav {
   font-size: 2em;
   width: 100%;
-  background: #8cc800;
+  background: #fa96fa;
   padding: 0.18519em 0;
   max-height: 2.47037em;
   -webkit-box-sizing: border-box;
@@ -63,19 +63,19 @@ nav {
   nav a {
     padding: 0 2em;
     overflow: hidden;
-    color: #37431b;
+    color: #4d394d;
     text-decoration: none; }
   nav a:hover, nav a:focus, nav a.active {
-    color: #0a0c05;
+    color: #211821;
     text-decoration: none;
-    border-bottom: 0.18519em solid #465522; }
+    border-bottom: 0.18519em solid #5c445c; }
 
 a {
-  color: #456200; }
+  color: #f535f5; }
 
 a:hover, a:focus {
   text-decoration: none;
-  color: #689500;
+  color: #f865f8;
   transition: all .15s ease-in-out; }
 
 .chibi {
@@ -164,7 +164,7 @@ footer {
     margin: 0 auto; }
   footer a {
     text-decoration: none;
-    color: #8cc800; }
+    color: #fa96fa; }
   footer a.link-blue {
     color: #3296f0; }
   footer a.link-red {
