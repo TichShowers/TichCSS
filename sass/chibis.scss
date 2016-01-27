@@ -9,8 +9,10 @@ $images: (
 			'Ladder': '../img/chibis//diving_ladder_repeat.png',
 		),
 		'magical-girl' : (
-			'Top': '../img/chibis//magical-girl-top.png',
-			
+			'Top': '../img/chibis//magical-girl-top.png'
+		),
+		'guitar' : (
+			'Top' : '../img/chibis/rayne-guitar.png'
 		)
 	);
 
@@ -18,22 +20,55 @@ $images: (
     @return map-get(map-get($images, $set), $image);
 }
 
+
+
 $chibi-size: 800px;
 $diving-start-offset: 90px;
 $magical-girl-start-offset: 50px;
+$guitar-start-offset: 200px;
 
 .chibi {
 	padding: 50px;
 	
 	max-width: $chibi-size;
 	
-	//margin: 0 auto;
+	margin: 0.5em auto;
 	
 	.content-box {
 		background: lighten($key-color, 20); 
 		padding: 1em;
+		width: $chibi-size - 200px;
 		@include border-radius(1em);
 		@include box-shadow(0 1px 7px 0.05em $dark-color);
+	}
+}
+
+$guitar-start: $chibi-size - $guitar-start-offset;
+
+.chibi-guitar {
+	position: relative; 
+	padding-top: 115px;
+	
+	//width: $guitar-start;
+	
+	.content-box {
+		min-height: 100px;
+		width: ($guitar-start);
+		margin-right:  $guitar-start-offset;
+	}
+	
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+		background-image: url(chibi('guitar', 'Top'));		
+		background-repeat: no-repeat;
+		background-size: 116px;
+		background-position: top left;
 	}
 }
 
@@ -41,13 +76,12 @@ $magical-girl-start: $chibi-size - $magical-girl-start-offset;
 
 .chibi-magical-girl {
 	position: relative; 
-	margin-left: $magical-girl-start-offset;
 	padding-top: 115px;
 	
-	width: $magical-girl-start;
+	//width: $magical-girl-start;
 	
 	.content-box {
-		min-height: 205px;
+		min-height: 100px;
 		width: ($magical-girl-start - $magical-girl-start-offset);
 	}
 	

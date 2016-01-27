@@ -3,6 +3,7 @@ logs
 *.log
 img
 .vscode
+.vscode*
 
 # Runtime data
 pids

@@ -1,22 +1,45 @@
 @import './variables.scss';
 @import './mixins.scss';
 
+$banner-sizes: (
+    xs: $banner-height / 2,
+    sm: $banner-height / 1.5,
+    md: $banner-height,
+    lg: $banner-height * 1.5,
+    xl: $banner-height * 2
+    );
+
 .banner {
 	height: $banner-height;
     background: url($banner-img) repeat scroll 0 10%;
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-content: center;
-    
+
     img {
-        width: $avatar-dimensions;
-        height: $avatar-dimensions;
-        margin: $avatar-position auto;
+        width: 0.6 * $banner-height;
+        height: 0.6 * $banner-height;
+        margin: (0.2 * $banner-height) auto;
         
         @include border-radius(100%);
         border: $border-thick solid (transparentize($key-color, 0.3));
     }
+}
+
+@each $name, $size in $banner-sizes {
+    .banner-#{$name} {
+        height: $size;
+        
+        img {
+            width: 0.6 * $size;
+            height: 0.6 * $size;
+            margin: (0.2 * $size) auto;
+            
+            @include border-radius(100%);
+            border: $border-thick solid (transparentize($key-color, 0.3));
+        }
+    }
+    
 }
 
 $border: $border-thick / 2.7;
@@ -45,7 +68,7 @@ nav {
         justify-content: center;
     }
     
-    li{ 
+    li { 
         padding: 0;
         margin: -0.05em;
         display: inline-block;
